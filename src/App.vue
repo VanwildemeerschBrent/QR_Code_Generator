@@ -1,7 +1,7 @@
 <template>
-	<div id="app w-screen h-screen ">
-		<QRCodeConfiguration class="relative float-left w-8/12 h-screen" />
-		<QRCodeViewerComponent class="relative float-left w-4/12 h-screen border-r" />
+	<div class="flex w-screen h-screen app bg-appBlueLight">
+		<QRCodeConfiguration class="w-8/12 h-screen qr-configuration-container" />
+		<QRCodeViewerComponent class="w-4/12 text-white qr-viewer-container bg" />
 	</div>
 </template>
 
@@ -19,5 +19,9 @@
 	export default class App extends Vue {}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+	.app {
+		display: flex;
+		flex-direction: row;
+	}
 </style>
