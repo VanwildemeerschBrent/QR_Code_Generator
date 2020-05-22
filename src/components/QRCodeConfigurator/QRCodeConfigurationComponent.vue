@@ -1,5 +1,8 @@
-µ
-
+<template>
+	<div class>
+		<p>QR Code configurator</p>
+	</div>
+</template>
 
 <script lang="ts">
 	import { Component, Prop, Vue } from "vue-property-decorator";
@@ -7,11 +10,6 @@
 	@Component
 	export default class QRCodeConfiguration extends Vue {
 		@Prop() private msg!: string;
-		firstName = "Brent";
-		lastName = "Vanwildemeersch";
-		get fullName() {
-			return this.firstName + " " + this.lastName;
-		}
 	}
 </script>
 

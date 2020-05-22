@@ -1,7 +1,7 @@
 <template>
 	<div id="app w-screen h-screen ">
-		<QRCodeViewerComponent class="h-screen w-8/12 relative float-left border-r" />
-		<QRCodeConfiguration class="h-screen w-4/12 relative float-left" />
+		<QRCodeConfiguration class="relative float-left w-8/12 h-screen" />
+		<QRCodeViewerComponent class="relative float-left w-4/12 h-screen border-r" />
 	</div>
 </template>
 

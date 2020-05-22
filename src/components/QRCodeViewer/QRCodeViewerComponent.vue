@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<h1>QR code viewer</h1>
+	<div class="p-4 rounded-md">
+		<p>QR Code viewer component</p>
 	</div>
 </template>
 
