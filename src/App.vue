@@ -1,7 +1,7 @@
 <template>
 	<div class="flex w-screen h-screen app bg-appBlueLight">
-		<QRCodeConfiguration class="w-8/12 h-screen qr-configuration-container" />
-		<QRCodeViewerComponent class="w-4/12 text-white qr-viewer-container bg" />
+		<QRCodeConfiguration class="w-7/12 h-screen qr-configuration-container" />
+		<QRCodeViewerComponent class="w-5/12 text-white qr-viewer-container bg" />
 	</div>
 </template>
 
