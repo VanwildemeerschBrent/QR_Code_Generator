@@ -6,6 +6,7 @@ module.exports = {
         appMainColor: "#47BDEF",
         appBlueLight: "#ECF7FF",
         appBlueDark: "#00288A",
+        appButtonLight: "#113A9F",
       },
       flex: {
         "2": "2 2 0%",

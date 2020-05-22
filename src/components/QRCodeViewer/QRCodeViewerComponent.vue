@@ -1,20 +1,30 @@
 <template>
 	<div class="qr-code-viewer-component">
-		<div class="ml-8 mr-8 rounded-lg qr-code-viewer-component__content bg-appBlueDark">
-			<p>QR Code viewer component</p>
-			<img src="../../assets/qr.png" class="w-6/12 ml-auto mr-auto" />
+		<div class="ml-8 mr-8 rounded-lg shadow-xl qr-code-viewer-component__content bg-appBlueDark">
+			<img src="../../assets/qr.png" class="w-6/12 pt-20 ml-auto mr-auto" />
 			<div class="mt-4 text-center content_subActions">
-				<button
-					class="w-8/12 px-4 py-2 mt-4 ml-auto mr-auto font-bold text-white bg-blue-500 rounded rounded-md hover:bg-blue-700"
-				>Frame</button>
-				<button
-					class="w-8/12 px-4 py-2 mt-4 ml-auto mr-auto font-bold text-white bg-blue-500 rounded rounded-md hover:bg-blue-700"
-				>Shape & Color</button>
-				<button
-					class="w-8/12 px-4 py-2 mt-4 ml-auto mr-auto font-bold text-white bg-blue-500 rounded rounded-md hover:bg-blue-700"
-				>Logo</button>
+				<div class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto bg-orange-500 rounded-md">
+					<div class="relative float-left w-9/12 text-left">
+						<p>Frame</p>
+					</div>
+					<div class="relative float-right w-3/12">
+						<AccessAlarm />
+					</div>
+				</div>
+				<div class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto bg-orange-500 rounded-md">
+					<div class="relative float-left w-9/12 text-left">
+						<p>Shape & Color</p>
+					</div>
+					<div class="relative float-right w-3/12"></div>
+				</div>
+				<div class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto bg-orange-500 rounded-md">
+					<div class="relative float-left w-9/12 text-left">
+						<p>Logo</p>
+					</div>
+					<div class="relative float-right w-3/12"></div>
+				</div>
 			</div>
-			<div class="mt-4 text-center content-downloadActions">
+			<div class="pb-20 mt-4 text-center content-downloadActions">
 				<button
 					class="inline-flex items-center px-4 py-2 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400"
 				>
@@ -39,14 +49,11 @@
 <script lang="ts">
 	import { Component, Prop, Vue } from "vue-property-decorator";
 
-	@Component
+	@Component({
+		components: {}
+	})
 	export default class QRCodeViewerComponent extends Vue {
 		@Prop() private msg!: string;
-		firstName = "Brent";
-		lastName = "Vanwildemeersch";
-		get fullName() {
-			return this.firstName + " " + this.lastName;
-		}
 	}
 </script>
 
