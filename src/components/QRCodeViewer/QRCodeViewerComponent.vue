@@ -3,25 +3,69 @@
 		<div class="ml-8 mr-8 rounded-lg shadow-xl qr-code-viewer-component__content bg-appBlueDark">
 			<img src="../../assets/qr.png" class="w-6/12 pt-20 ml-auto mr-auto" />
 			<div class="mt-4 text-center content_subActions">
-				<div class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto bg-orange-500 rounded-md">
+				<div
+					class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto rounded-md cursor-pointer bg-appButtonLight"
+				>
 					<div class="relative float-left w-9/12 text-left">
 						<p>Frame</p>
 					</div>
-					<div class="relative float-right w-3/12">
-						<AccessAlarm />
+					<div class="relative float-right w-3/12 text-right text-white">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="relative float-right text-white fill-current"
+							viewBox="0 0 24 24"
+							width="24"
+							height="24"
+						>
+							<path
+								class="heroicon-ui"
+								d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
+							/>
+						</svg>
 					</div>
+					<div class="detail_frame" v-show="isFrameConfigVisible"></div>
 				</div>
-				<div class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto bg-orange-500 rounded-md">
+				<div
+					class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto rounded-md cursor-pointer bg-appButtonLight"
+				>
 					<div class="relative float-left w-9/12 text-left">
 						<p>Shape & Color</p>
 					</div>
-					<div class="relative float-right w-3/12"></div>
+					<div class="relative float-right w-3/12 text-right text-white">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="relative float-right text-white fill-current"
+							viewBox="0 0 24 24"
+							width="24"
+							height="24"
+						>
+							<path
+								class="heroicon-ui"
+								d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
+							/>
+						</svg>
+					</div>
 				</div>
-				<div class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto bg-orange-500 rounded-md">
+				<div
+					class="inline-block w-8/12 px-4 py-2 mt-4 ml-auto mr-auto rounded-md cursor-pointer bg-appButtonLight"
+				>
 					<div class="relative float-left w-9/12 text-left">
 						<p>Logo</p>
 					</div>
-					<div class="relative float-right w-3/12"></div>
+					<div class="relative float-right w-3/12 text-right text-white">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="relative float-right text-white fill-current"
+							viewBox="0 0 24 24"
+							width="24"
+							height="24"
+						>
+							<path
+								class="heroicon-ui"
+								d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
+							/>
+						</svg>
+					</div>
 				</div>
 			</div>
 			<div class="pb-20 mt-4 text-center content-downloadActions">
@@ -54,6 +98,10 @@
 	})
 	export default class QRCodeViewerComponent extends Vue {
 		@Prop() private msg!: string;
+
+		isFrameConfigVisible = false;
+		isShapeAndColorConfigVisible = false;
+		isLogoConfigVisible = false;
 	}
 </script>
 
